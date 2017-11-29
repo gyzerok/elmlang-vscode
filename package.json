@@ -1,38 +1,38 @@
 {
-    "name": "elmlang",
-    "displayName": "elmlang",
-    "description": "Elm language support for Visual Studio Code",
-    "version": "0.0.1",
-    "publisher": "gyzerok",
-    "engines": {
-        "vscode": "^1.17.0"
-    },
-    "categories": [
-        "Languages"
-    ],
-    "contributes": {
-        "languages": [
-            {
-                "id": "elm",
-                "aliases": [
-                    "Elm",
-                    "elm"
-                ],
-                "extensions": [
-                    ".elm"
-                ],
-                "configuration": "./language-configuration.json"
-            }
+  "name": "elmlang",
+  "displayName": "elmlang",
+  "description": "Elm language support for Visual Studio Code",
+  "version": "0.0.1",
+  "publisher": "gyzerok",
+  "engines": {
+    "vscode": "^1.17.0"
+  },
+  "categories": [
+    "Languages"
+  ],
+  "contributes": {
+    "languages": [
+      {
+        "id": "elm",
+        "aliases": [
+          "Elm",
+          "elm"
         ],
-        "grammars": [
-            {
-                "language": "elm",
-                "scopeName": "source.elm",
-                "path": "./syntaxes/elm.tmLanguage.json"
-            }
-        ]
-    },
-    "devDependencies": {
-        "prettier": "^1.8.2"
-    }
+        "extensions": [
+          ".elm"
+        ],
+        "configuration": "./language-configuration.json"
+      }
+    ],
+    "grammars": [
+      {
+        "language": "elm",
+        "scopeName": "source.elm",
+        "path": "./syntaxes/elm.tmLanguage.json"
+      }
+    ]
+  },
+  "devDependencies": {
+    "prettier": "^1.8.2"
+  }
 }
