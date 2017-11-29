@@ -1,0 +1,111 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "Elm",
+	"patterns": [
+		{
+			"name": "meta.module.elm",
+			"begin": "^\\b(module)\\b",
+			"end": "$",
+			"patterns": [
+				{
+					"name": "keyword.other.elm",
+					"begin": "\\b(exposing)\\b",
+					"end": "$",
+					"patterns": [
+						{ "include": "#typename" }
+					]
+				},
+				{
+					"include": "#namespace"
+				}
+			]
+		},
+		{
+			"name": "keyword.import.elm",
+			"begin": "^\\b(import)\\s+",
+			"end": "$",
+			"patterns": [
+				{
+					"name": "keyword.other.elm",
+					"match": "\\b(as|exposing)\\b"
+				},
+				{
+					"include": "#namespace"
+				}
+			]
+		},
+		{
+			"include": "#keywords"
+		},
+		{
+			"include": "#strings"
+		},
+		{
+			"include": "#typename"
+		},
+		{
+			"include": "#namespace"
+		},
+		{
+			"include": "#other"
+		},
+		{
+			"include": "#comments"
+		}
+	],
+	"repository": {
+		"keywords": {
+			"patterns": [
+				{
+					"name": "keyword.control.elm",
+					"match": "\\b(if|then|else|case|of)\\b"
+				},
+				{
+					"name": "keyword.module.elm",
+					"match": "\\b(module)\\b"
+				},
+				{
+					"name": "keyword.arrow.elm",
+					"match": "->"
+				}
+			]
+		},
+		"strings": {
+			"name": "string.quoted.double.elm",
+			"begin": "\"",
+			"end": "\"",
+			"patterns": [
+				{
+					"name": "constant.character.escape.elm",
+					"match": "\\\\."
+				}
+			]
+		},
+		"namespace": {
+			"name": "entity.name.tag.elm",
+			"match": "\\b[A-Z][A-Za-z0-9_]*\\b"
+		},
+		"typename": {
+			"name": "entity.name.type.elm",
+			"match": "(?<!\\w)[A-Z][A-Za-z0-9_]+\\b(?!\\.)"
+		},
+		"other": {
+			"patterns": [
+				{
+					"name": "entity.name.function.elm",
+					"match": "^[a-z][A-Za-z0-9_'']*\\s+"
+				}
+			]
+		},
+		"comments": {
+      "patterns": [
+        {
+          "name": "comment.line.double-dash.elm",
+          "begin": "--",
+          "end": "$"
+        }
+      ]
+    }
+	},
+	"scopeName": "source.elm"
+}
