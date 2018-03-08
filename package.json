@@ -5,7 +5,7 @@
   "version": "0.0.1",
   "publisher": "gyzerok",
   "engines": {
-    "vscode": "^1.17.0"
+    "vscode": "^1.21.0"
   },
   "categories": [
     "Languages"
@@ -43,11 +43,11 @@
     "test": "node ./node_modules/vscode/bin/test"
   },
   "devDependencies": {
-    "@types/node": "^8.0.53",
-    "prettier": "^1.8.2",
-    "typescript": "^2.6.2"
+    "@types/node": "^8.9.4",
+    "prettier": "^1.11.1",
+    "typescript": "^2.7.2"
   },
   "dependencies": {
-    "vscode": "^1.1.9"
+    "vscode": "^1.1.12"
   }
 }
